@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            display: block;
+            margin: 20px 0px;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="text" placeholder="Your name">
+    <input type="email" placeholder="your email">
+    <input type="password" placeholder="skjc_ml232" maxlength="10">
+    <input type="radio">
+    <input type="checkbox">
+    <input type="submit">
+    <input type="button" value="Knopochka">
+    <input type="number">
+
+    <script>
+        // let text = document.getElementById('text');
+        // inputext = document.getElementById('inputText');
+        
+        // let changeText = function(){
+        //     console.log(this.value);
+        //     let p = document.createElement('p');
+        //     p.textContent = this.value
+        //     text.after(p)
+        // }
+
+        // text.addEventListener('change', changeText, false)
+
+        let inputs = [].slice.call(document.getElementsByTagName('input'))
+        console.log(inputs);
+
+        let changeText = function(){
+            console.log(this.value);
+        }
+        inputs.forEach(function(input){
+            input.addEventListener('change', changeText, false);
+        })
+    </script>
+</body>
+</html>
